@@ -4,17 +4,45 @@ import AFNetworking
 class InstagramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var photos = [NSDictionary]()
+    var refreshControl: UIRefreshControl!
     @IBOutlet var instagramTableView: UITableView!
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
+        instagramTableView.rowHeight = 320
         fetchInstagram()
+        refreshInstagram()
 
         instagramTableView.dataSource = self
         instagramTableView.delegate = self
     }
+
+    func refreshInstagram() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "onRefresh", forControlEvents: .ValueChanged)
+        self.instagramTableView.addSubview(refreshControl)
+    }
+
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+
+    func onRefresh() {
+        delay(2, closure: {
+            self.fetchInstagram()
+            self.instagramTableView.reloadData()
+            self.refreshControl.endRefreshing()
+        })
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,6 +78,11 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
 
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var vc = segue.destinationViewController as! PhotoDetailsViewController
+        var indexPath = instagramTableView.indexPathForCell(sender as! UITableViewCell)
+    }*/
+
     func fetchInstagram(){
         let url = NSURL(string: "https://api.instagram.com/v1/media/popular?client_id=0f6d7722e11746969c2aaeae0f42b960")
         let session = NSURLSession.sharedSession()
@@ -62,7 +95,7 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
 
             let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! NSDictionary
             self.photos = json["data"] as! [NSDictionary]
-            print("photos", self.photos)
+            //print("photos", self.photos)
 
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.instagramTableView.reloadData()

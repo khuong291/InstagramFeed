@@ -14,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="316" id="FGx-DB-LJx" customClass="PhotosCell" customModule="InstagramFeed" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="316" id="FGx-DB-LJx" customClass="PhotosCell" customModule="InstagramFeed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="316"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FGx-DB-LJx" id="p1R-AV-PFF">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="315"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XRp-yC-hFe">
@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -37,6 +37,7 @@
                                 <connections>
                                     <outlet property="thumbnailImageView" destination="XRp-yC-hFe" id="1Yr-6R-huD"/>
                                     <outlet property="userNameLabel" destination="8g6-zC-9Cf" id="Ruv-vz-wku"/>
+                                    <segue destination="Z2a-we-xBn" kind="push" id="msE-63-756"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +53,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="285"/>
+            <point key="canvasLocation" x="560" y="285"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="dd0-qe-x91">
+            <objects>
+                <viewController id="Z2a-we-xBn" customClass="PhotoDetailsViewController" customModule="InstagramFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9oS-vN-8WK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WE2-hu-JdE">
+                                <rect key="frame" x="0.0" y="95" width="320" height="339"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PRk-Lc-5U4"/>
+                    <connections>
+                        <outlet property="detailImageView" destination="WE2-hu-JdE" id="dYH-bl-7fS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6u-OD-VQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1L-1f-MP1">
