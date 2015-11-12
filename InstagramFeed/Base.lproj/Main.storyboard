@@ -110,7 +110,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="25n-Ov-WCX">
-                                                    <rect key="frame" x="8" y="40" width="304" height="97"/>
+                                                    <rect key="frame" x="2" y="40" width="316" height="97"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -120,12 +120,12 @@
                                             <constraints>
                                                 <constraint firstItem="CED-bL-Acm" firstAttribute="leading" secondItem="WM4-Ew-5zh" secondAttribute="trailing" constant="10" id="Fxz-sd-VeQ"/>
                                                 <constraint firstItem="WM4-Ew-5zh" firstAttribute="leading" secondItem="7Ty-oX-Nxp" secondAttribute="leading" constant="5" id="Q4H-2n-Pfn"/>
-                                                <constraint firstAttribute="trailing" secondItem="25n-Ov-WCX" secondAttribute="trailing" constant="8" id="fv4-60-xza"/>
+                                                <constraint firstAttribute="trailing" secondItem="25n-Ov-WCX" secondAttribute="trailing" constant="2" id="fv4-60-xza"/>
                                                 <constraint firstItem="WM4-Ew-5zh" firstAttribute="top" secondItem="7Ty-oX-Nxp" secondAttribute="top" constant="5" id="gKi-9C-zwd"/>
                                                 <constraint firstItem="25n-Ov-WCX" firstAttribute="top" secondItem="WM4-Ew-5zh" secondAttribute="bottom" constant="5" id="hV0-WZ-OeA"/>
                                                 <constraint firstAttribute="bottom" secondItem="25n-Ov-WCX" secondAttribute="bottom" constant="8" id="jBO-pA-Imn"/>
                                                 <constraint firstItem="CED-bL-Acm" firstAttribute="centerY" secondItem="WM4-Ew-5zh" secondAttribute="centerY" id="rO3-k6-5ug"/>
-                                                <constraint firstItem="25n-Ov-WCX" firstAttribute="leading" secondItem="7Ty-oX-Nxp" secondAttribute="leading" constant="8" id="vWE-Fa-Jir"/>
+                                                <constraint firstItem="25n-Ov-WCX" firstAttribute="leading" secondItem="7Ty-oX-Nxp" secondAttribute="leading" constant="2" id="vWE-Fa-Jir"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

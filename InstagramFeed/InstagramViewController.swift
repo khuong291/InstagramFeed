@@ -65,7 +65,7 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = instagramTableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PhotosCell
 
         let instagram = photos[indexPath.row]
-        let name = instagram.valueForKeyPath("user.username") as? String
+        let name = instagram.valueForKeyPath("user.full_name") as? String
         cell.userNameLabel.text = name
 
         let url = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
@@ -87,7 +87,9 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         let photoDetailsViewController = segue.destinationViewController as! PhotoDetailsViewController
         let indexPath = instagramTableView.indexPathForCell(sender as! UITableViewCell)
         let instagram = photos[indexPath!.row]
+
         photoDetailsViewController.instagram = instagram
+        photoDetailsViewController.comments = photos
     }
 
     func fetchInstagram(){
