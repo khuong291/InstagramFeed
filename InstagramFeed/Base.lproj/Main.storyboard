@@ -36,25 +36,21 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XRp-yC-hFe">
-                                            <rect key="frame" x="0.0" y="53" width="320" height="262"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="262" id="ACL-fC-6xD"/>
-                                                <constraint firstAttribute="width" constant="320" id="b6W-bd-f0R"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="45" width="320" height="270"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="8g6-zC-9Cf" firstAttribute="centerY" secondItem="bKD-TP-4HL" secondAttribute="centerY" id="1vZ-qh-zmd"/>
                                         <constraint firstItem="8g6-zC-9Cf" firstAttribute="leading" secondItem="bKD-TP-4HL" secondAttribute="trailing" constant="20" id="34s-Ik-rIk"/>
+                                        <constraint firstAttribute="bottom" secondItem="XRp-yC-hFe" secondAttribute="bottom" id="K1Z-Ac-lOL"/>
                                         <constraint firstItem="bKD-TP-4HL" firstAttribute="leading" secondItem="p1R-AV-PFF" secondAttribute="leading" constant="10" id="UAn-xC-Pl4"/>
+                                        <constraint firstItem="XRp-yC-hFe" firstAttribute="top" secondItem="p1R-AV-PFF" secondAttribute="top" constant="45" id="UYn-uf-8ZZ"/>
                                         <constraint firstItem="8g6-zC-9Cf" firstAttribute="top" secondItem="p1R-AV-PFF" secondAttribute="topMargin" id="Ub9-3F-Qej"/>
+                                        <constraint firstItem="XRp-yC-hFe" firstAttribute="leading" secondItem="p1R-AV-PFF" secondAttribute="leading" id="Yyw-xh-xu4"/>
                                         <constraint firstItem="bKD-TP-4HL" firstAttribute="top" secondItem="p1R-AV-PFF" secondAttribute="top" constant="10" id="aRc-vc-kUw"/>
+                                        <constraint firstAttribute="trailing" secondItem="XRp-yC-hFe" secondAttribute="trailing" id="gJ3-2x-teZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="XRp-yC-hFe" secondAttribute="bottom" constant="1" id="4G4-cA-mED"/>
-                                    <constraint firstItem="XRp-yC-hFe" firstAttribute="centerX" secondItem="FGx-DB-LJx" secondAttribute="centerX" id="fsk-WW-jTw"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="avatarUserImageView" destination="bKD-TP-4HL" id="AVQ-6b-noN"/>
                                     <outlet property="thumbnailImageView" destination="XRp-yC-hFe" id="1Yr-6R-huD"/>

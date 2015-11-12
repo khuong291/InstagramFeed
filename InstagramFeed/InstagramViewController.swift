@@ -65,17 +65,19 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = instagramTableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PhotosCell
 
         let instagram = photos[indexPath.row]
-        let usernames = instagram.valueForKeyPath("likes.data") as! [NSDictionary]
-        let username = usernames.first!
-
-        let name = username.valueForKeyPath("username") as? String
+        let name = instagram.valueForKeyPath("user.username") as? String
         cell.userNameLabel.text = name
 
         let url = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
         cell.thumbnailImageView.setImageWithURL(url)
-        let url2 = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
-        cell.avatarUserImageView.setImageWithURL(url2)
+
+        let urlAvatarUserImage = NSURL(string: instagram.valueForKeyPath("user.profile_picture") as! String)!
+        cell.avatarUserImageView.setImageWithURL(urlAvatarUserImage)
+
         cell.avatarUserImageView.layer.cornerRadius = cell.avatarUserImageView.frame.size.width / 2;
+        cell.avatarUserImageView.layer.borderWidth = 1.0
+        cell.avatarUserImageView.layer.masksToBounds = false
+        cell.avatarUserImageView.layer.borderColor = UIColor.whiteColor().CGColor
         cell.avatarUserImageView.clipsToBounds = true;
 
         return cell
