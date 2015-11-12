@@ -1,15 +1,28 @@
 
 import UIKit
 
-class PhotoDetailsViewController: UITableViewController {
+class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet var detailImageView: UIImageView!
+    var instagram: NSDictionary!
+
+    @IBOutlet var avatarUserCommentImageView: UIImageView!
+    @IBOutlet var userCommentNameLabel: UILabel!
+    @IBOutlet var userCommentLineTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
     }
 
 }

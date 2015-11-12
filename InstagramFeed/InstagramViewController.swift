@@ -12,6 +12,7 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
 
         instagramTableView.rowHeight = 320
+        self.title = "Instagram"
         fetchInstagram()
         refreshInstagram()
 
@@ -74,14 +75,18 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
 
         let url = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
         cell.thumbnailImageView.setImageWithURL(url)
+        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
+        cell.thumbnailImageView.clipsToBounds = true;
 
         return cell
     }
 
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vc = segue.destinationViewController as! PhotoDetailsViewController
-        var indexPath = instagramTableView.indexPathForCell(sender as! UITableViewCell)
-    }*/
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let photoDetailsViewController = segue.destinationViewController as! PhotoDetailsViewController
+        let indexPath = instagramTableView.indexPathForCell(sender as! UITableViewCell)
+        let instagram = photos[indexPath!.row]
+        photoDetailsViewController.instagram = instagram
+    }
 
     func fetchInstagram(){
         let url = NSURL(string: "https://api.instagram.com/v1/media/popular?client_id=0f6d7722e11746969c2aaeae0f42b960")
