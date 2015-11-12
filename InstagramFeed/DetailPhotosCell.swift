@@ -11,8 +11,8 @@ import UIKit
 class DetailPhotosCell: UITableViewCell {
 
 
-    @IBOutlet var userCommentContentTextView: UITextView!
     @IBOutlet var userCommentNameLabel: UILabel!
+    @IBOutlet var contentComentTextView: UITextView!
     @IBOutlet var avatarUserCommentImageView: UIImageView!
 
     override func awakeFromNib() {

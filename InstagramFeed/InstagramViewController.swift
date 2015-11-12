@@ -74,9 +74,9 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         let url = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
         cell.thumbnailImageView.setImageWithURL(url)
         let url2 = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
-        cell.av.setImageWithURL(url2)
-        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
-        cell.thumbnailImageView.clipsToBounds = true;
+        cell.avatarUserImageView.setImageWithURL(url2)
+        cell.avatarUserImageView.layer.cornerRadius = cell.avatarUserImageView.frame.size.width / 2;
+        cell.avatarUserImageView.clipsToBounds = true;
 
         return cell
     }

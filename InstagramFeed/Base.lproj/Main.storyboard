@@ -132,6 +132,11 @@
                                                 <constraint firstItem="25n-Ov-WCX" firstAttribute="leading" secondItem="7Ty-oX-Nxp" secondAttribute="leading" constant="8" id="vWE-Fa-Jir"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarUserCommentImageView" destination="WM4-Ew-5zh" id="mkK-uz-Vbw"/>
+                                            <outlet property="contentComentTextView" destination="25n-Ov-WCX" id="mTa-Eg-Oyr"/>
+                                            <outlet property="userCommentNameLabel" destination="CED-bL-Acm" id="WBX-q9-Ekd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -143,11 +148,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PRk-Lc-5U4"/>
-                    <connections>
-                        <outlet property="avatarUserCommentImageView" destination="WM4-Ew-5zh" id="hgH-SW-IC9"/>
-                        <outlet property="userCommentLineTextView" destination="25n-Ov-WCX" id="Zke-WG-Ebc"/>
-                        <outlet property="userCommentNameLabel" destination="CED-bL-Acm" id="mZh-5A-xPh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6u-OD-VQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
