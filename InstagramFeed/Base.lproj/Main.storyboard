@@ -144,6 +144,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PRk-Lc-5U4"/>
+                    <connections>
+                        <outlet property="photoDetailsTableView" destination="sd6-hW-wWc" id="OKH-ZC-yJ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6u-OD-VQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

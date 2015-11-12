@@ -2,7 +2,8 @@
 import UIKit
 
 class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    @IBOutlet var photoDetailsTableView: UITableView!
     var instagram: NSDictionary!
     
     override func viewDidLoad() {
@@ -18,20 +19,15 @@ class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("DetailCell", forIndexPath: indexPath) as! DetailPhotosCell
+        let cell = photoDetailsTableView.dequeueReusableCellWithIdentifier("DetailCell", forIndexPath: indexPath) as! DetailPhotosCell
 
-        /*let instagram = photos[indexPath.row]
-        let usernames = instagram.valueForKeyPath("likes.data") as! [NSDictionary]
-        let username = usernames.first!
 
-        let name = username.valueForKeyPath("username") as? String
-
-        cell.userNameLabel.text = name
+        /*let instagramDetail = photo[indexPath.row]
+        let name = instagramDetail.valueForKeyPath("user.username") as? String
+        cell.userCommentNameLabel.text = name
 
         let url = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
-        cell.thumbnailImageView.setImageWithURL(url)
-        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
-        cell.thumbnailImageView.clipsToBounds = true;*/
+        cell.avatarUserCommentImageView.setImageWithURL(url)*/
         
         return cell
     }

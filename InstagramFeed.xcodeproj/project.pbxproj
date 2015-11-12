@@ -75,17 +75,33 @@
 		990E53FA1BF36BF7000BD607 /* InstagramFeed */ = {
 			isa = PBXGroup;
 			children = (
+				99703B8B1BF4EDE5006E9C0D /* ViewController */,
+				99703B8A1BF4EDE0006E9C0D /* Cell */,
 				990E53FB1BF36BF7000BD607 /* AppDelegate.swift */,
 				990E53FF1BF36BF7000BD607 /* Main.storyboard */,
 				990E54021BF36BF7000BD607 /* Assets.xcassets */,
 				990E54041BF36BF7000BD607 /* LaunchScreen.storyboard */,
 				990E54071BF36BF7000BD607 /* Info.plist */,
-				990E540D1BF36DA0000BD607 /* InstagramViewController.swift */,
-				990E54111BF376F6000BD607 /* PhotosCell.swift */,
-				993B12981BF436F800D168B2 /* PhotoDetailsViewController.swift */,
-				99703B881BF4DD43006E9C0D /* DetailPhotosCell.swift */,
 			);
 			path = InstagramFeed;
+			sourceTree = "<group>";
+		};
+		99703B8A1BF4EDE0006E9C0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				990E54111BF376F6000BD607 /* PhotosCell.swift */,
+				99703B881BF4DD43006E9C0D /* DetailPhotosCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		99703B8B1BF4EDE5006E9C0D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				993B12981BF436F800D168B2 /* PhotoDetailsViewController.swift */,
+				990E540D1BF36DA0000BD607 /* InstagramViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		C1D5F16DBB3B5AEA8B491649 /* Pods */ = {

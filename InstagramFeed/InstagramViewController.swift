@@ -21,7 +21,7 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
 
     func refreshInstagram() {
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.attributedTitle = NSAttributedString(string: "🐌🐌🐌🐌Refreshing🐌🐌🐌🐌")
         self.refreshControl.addTarget(self, action: "onRefresh", forControlEvents: .ValueChanged)
         self.instagramTableView.addSubview(refreshControl)
     }
@@ -36,7 +36,7 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func onRefresh() {
-        delay(2, closure: {
+        delay(3, closure: {
             self.fetchInstagram()
             self.instagramTableView.reloadData()
             self.refreshControl.endRefreshing()
