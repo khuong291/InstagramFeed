@@ -11,7 +11,6 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
 
         super.viewDidLoad()
 
-        instagramTableView.rowHeight = 320
         self.title = "Instagram"
         fetchInstagram()
         refreshInstagram()
@@ -70,11 +69,12 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         let username = usernames.first!
 
         let name = username.valueForKeyPath("username") as? String
-
         cell.userNameLabel.text = name
 
         let url = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
         cell.thumbnailImageView.setImageWithURL(url)
+        let url2 = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
+        cell.av.setImageWithURL(url2)
         cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
         cell.thumbnailImageView.clipsToBounds = true;
 

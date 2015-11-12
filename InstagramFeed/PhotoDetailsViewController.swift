@@ -4,10 +4,6 @@ import UIKit
 class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var instagram: NSDictionary!
-
-    @IBOutlet var avatarUserCommentImageView: UIImageView!
-    @IBOutlet var userCommentNameLabel: UILabel!
-    @IBOutlet var userCommentLineTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +13,27 @@ class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITable
         super.didReceiveMemoryWarning()
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("DetailCell", forIndexPath: indexPath) as! DetailPhotosCell
 
+        /*let instagram = photos[indexPath.row]
+        let usernames = instagram.valueForKeyPath("likes.data") as! [NSDictionary]
+        let username = usernames.first!
+
+        let name = username.valueForKeyPath("username") as? String
+
+        cell.userNameLabel.text = name
+
+        let url = NSURL(string: instagram.valueForKeyPath("images.thumbnail.url") as! String)!
+        cell.thumbnailImageView.setImageWithURL(url)
+        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2;
+        cell.thumbnailImageView.clipsToBounds = true;*/
+        
+        return cell
     }
 
 }

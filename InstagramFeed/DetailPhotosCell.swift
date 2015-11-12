@@ -1,18 +1,19 @@
 //
-//  PhotosCell.swift
+//  DetailPhotosCell.swift
 //  InstagramFeed
 //
-//  Created by Khuong Pham on 11/11/15.
+//  Created by Khuong Pham on 11/12/15.
 //  Copyright © 2015 Fantageek. All rights reserved.
 //
 
 import UIKit
 
-class PhotosCell: UITableViewCell {
+class DetailPhotosCell: UITableViewCell {
 
-    @IBOutlet var avatarUserImageView: UIImageView!
-    @IBOutlet var thumbnailImageView: UIImageView!
-    @IBOutlet var userNameLabel: UILabel!
+
+    @IBOutlet var userCommentContentTextView: UITextView!
+    @IBOutlet var userCommentNameLabel: UILabel!
+    @IBOutlet var avatarUserCommentImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +25,5 @@ class PhotosCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 }
