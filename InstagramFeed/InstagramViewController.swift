@@ -87,7 +87,7 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         let photoDetailsViewController = segue.destinationViewController as! PhotoDetailsViewController
         let indexPath = instagramTableView.indexPathForCell(sender as! UITableViewCell)
         let instagram = photos[indexPath!.row]
-
+        
         photoDetailsViewController.comments = instagram.valueForKeyPath("comments.data") as! [NSDictionary]
         photoDetailsViewController.instagram = instagram
     }

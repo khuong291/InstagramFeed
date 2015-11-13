@@ -1,8 +1,10 @@
 
 import UIKit
+import AFNetworking
 
 class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var photoDetailImageView: UIImageView!
     @IBOutlet var photoDetailsTableView: UITableView!
 
     var instagram: NSDictionary!
@@ -10,6 +12,8 @@ class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let url = NSURL(string: instagram.valueForKeyPath("images.standard_resolution.url") as! String)!
+        photoDetailImageView.setImageWithURL(url)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +35,7 @@ class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITable
 
         let url = NSURL(string: data.valueForKeyPath("from.profile_picture") as! String)!
         cell.avatarUserCommentImageView.setImageWithURL(url)
+
         cell.avatarUserCommentImageView.layer.cornerRadius = cell.avatarUserCommentImageView.frame.size.width / 2;
         cell.avatarUserCommentImageView.layer.borderWidth = 1.0
         cell.avatarUserCommentImageView.layer.masksToBounds = false
