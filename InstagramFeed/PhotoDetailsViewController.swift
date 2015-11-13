@@ -12,6 +12,7 @@ class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let url = NSURL(string: instagram.valueForKeyPath("images.standard_resolution.url") as! String)!
         photoDetailImageView.setImageWithURL(url)
     }
@@ -19,6 +20,30 @@ class PhotoDetailsViewController: UIViewController, UITableViewDelegate, UITable
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    func createView() -> UIView {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        headerView.backgroundColor = UIColor(white: 1, alpha: 0.9)
+
+        let profileView = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+        profileView.clipsToBounds = true
+        profileView.layer.cornerRadius = 15;
+        profileView.layer.borderColor = UIColor(white: 0.7, alpha: 0.8).CGColor
+        profileView.layer.borderWidth = 1;
+
+        // Use the section number to get the right URL
+        // profileView.setImageWithURL(...)
+
+        headerView.addSubview(profileView)
+
+        // Add a UILabel for the username here
+
+        return headerView
+    }
+
+    /*func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        <#code#>
+    }*/
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
