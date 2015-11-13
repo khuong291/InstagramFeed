@@ -85,16 +85,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sd6-hW-wWc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sd6-hW-wWc">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="a9i-hy-phS">
-                                    <rect key="frame" x="0.0" y="64" width="320" height="294"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <gestureRecognizers/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="5HV-4W-UXK" appends="YES" id="ps0-Xk-Dnn"/>
+                                    </connections>
                                 </imageView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailCell" rowHeight="99" id="I6m-rv-CI9" customClass="DetailPhotosCell" customModule="InstagramFeed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="386" width="320" height="99"/>
+                                        <rect key="frame" x="0.0" y="322" width="320" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I6m-rv-CI9" id="7Ty-oX-Nxp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
@@ -146,6 +150,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sd6-hW-wWc" secondAttribute="trailing" id="BBw-Vd-aZo"/>
+                            <constraint firstItem="aDm-qy-J3L" firstAttribute="top" secondItem="sd6-hW-wWc" secondAttribute="bottom" id="EwK-rF-Cz0"/>
+                            <constraint firstItem="sd6-hW-wWc" firstAttribute="top" secondItem="Ux8-Hd-kKR" secondAttribute="bottom" id="gxl-mm-XuK"/>
+                            <constraint firstItem="sd6-hW-wWc" firstAttribute="leading" secondItem="9oS-vN-8WK" secondAttribute="leading" id="lxp-h0-IcR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PRk-Lc-5U4"/>
                     <connections>
@@ -154,8 +164,64 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6u-OD-VQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5HV-4W-UXK"/>
             </objects>
-            <point key="canvasLocation" x="955" y="285"/>
+            <point key="canvasLocation" x="956" y="279"/>
+        </scene>
+        <!--Zoom Photo View Controller-->
+        <scene sceneID="X5S-su-mNX">
+            <objects>
+                <viewController id="FV5-K7-tIx" customClass="ZoomPhotoViewController" customModule="InstagramFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g9Y-48-pFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="GRW-zG-Vs4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CDM-hC-6D7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koC-te-rqX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cY-jM-hCr">
+                                        <rect key="frame" x="137" y="74" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="Z2a-we-xBn" kind="push" id="NIh-Yk-2KI"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uw9-Uv-pAH">
+                                        <rect key="frame" x="0.0" y="139" width="320" height="290"/>
+                                        <color key="backgroundColor" red="0.0" green="0.95686274510000002" blue="0.79422636560000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="290" id="B46-1B-HGs"/>
+                                            <constraint firstAttribute="width" constant="320" id="qmZ-9U-vRt"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Uw9-Uv-pAH" secondAttribute="trailing" id="CWt-UK-Gzr"/>
+                                    <constraint firstItem="Uw9-Uv-pAH" firstAttribute="top" secondItem="koC-te-rqX" secondAttribute="top" constant="139" id="E0d-yn-5zI"/>
+                                    <constraint firstAttribute="width" constant="320" id="Wf1-t8-R9C"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uw9-Uv-pAH" secondAttribute="bottom" constant="139" id="egN-N6-g2v"/>
+                                    <constraint firstAttribute="height" constant="568" id="fZy-fR-Gog"/>
+                                    <constraint firstItem="Uw9-Uv-pAH" firstAttribute="leading" secondItem="koC-te-rqX" secondAttribute="leading" id="i1t-kh-u7g"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="koC-te-rqX" firstAttribute="leading" secondItem="CDM-hC-6D7" secondAttribute="leading" id="8LW-Yk-g87"/>
+                            <constraint firstItem="GRW-zG-Vs4" firstAttribute="top" secondItem="koC-te-rqX" secondAttribute="bottom" id="I08-f3-LvU"/>
+                            <constraint firstAttribute="trailing" secondItem="koC-te-rqX" secondAttribute="trailing" id="Ytx-xQ-ysD"/>
+                            <constraint firstItem="koC-te-rqX" firstAttribute="top" secondItem="g9Y-48-pFq" secondAttribute="bottom" constant="-20" id="yTs-1H-eZd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fdc-JB-2On" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1375" y="285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1L-1f-MP1">
@@ -176,4 +242,7 @@
             <point key="canvasLocation" x="149" y="285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NIh-Yk-2KI"/>
+    </inferredMetricsTieBreakers>
 </document>

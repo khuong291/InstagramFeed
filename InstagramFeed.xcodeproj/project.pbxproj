@@ -16,6 +16,7 @@
 		990E54121BF376F6000BD607 /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E54111BF376F6000BD607 /* PhotosCell.swift */; };
 		993B12991BF436F800D168B2 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993B12981BF436F800D168B2 /* PhotoDetailsViewController.swift */; };
 		99703B891BF4DD43006E9C0D /* DetailPhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99703B881BF4DD43006E9C0D /* DetailPhotosCell.swift */; };
+		99A1A2031BF64AC200891164 /* ZoomPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1A2021BF64AC200891164 /* ZoomPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		990E54111BF376F6000BD607 /* PhotosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
 		993B12981BF436F800D168B2 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		99703B881BF4DD43006E9C0D /* DetailPhotosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPhotosCell.swift; sourceTree = "<group>"; };
+		99A1A2021BF64AC200891164 /* ZoomPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomPhotoViewController.swift; sourceTree = "<group>"; };
 		DC4C34E69434BBFCEF1E0908 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E9EEFE4A7A4F820A717A117B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 			children = (
 				993B12981BF436F800D168B2 /* PhotoDetailsViewController.swift */,
 				990E540D1BF36DA0000BD607 /* InstagramViewController.swift */,
+				99A1A2021BF64AC200891164 /* ZoomPhotoViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A1A2031BF64AC200891164 /* ZoomPhotoViewController.swift in Sources */,
 				99703B891BF4DD43006E9C0D /* DetailPhotosCell.swift in Sources */,
 				993B12991BF436F800D168B2 /* PhotoDetailsViewController.swift in Sources */,
 				990E54121BF376F6000BD607 /* PhotosCell.swift in Sources */,
