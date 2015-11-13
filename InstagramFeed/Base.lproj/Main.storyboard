@@ -23,20 +23,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bKD-TP-4HL">
-                                            <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                            <rect key="frame" x="10" y="10" width="40" height="40"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="oOq-I6-f2S"/>
-                                                <constraint firstAttribute="width" constant="30" id="whI-N5-EGB"/>
+                                                <constraint firstAttribute="height" constant="40" id="oOq-I6-f2S"/>
+                                                <constraint firstAttribute="width" constant="40" id="whI-N5-EGB"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g6-zC-9Cf">
-                                            <rect key="frame" x="60" y="8" width="42" height="34"/>
+                                            <rect key="frame" x="70" y="8" width="42" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XRp-yC-hFe">
-                                            <rect key="frame" x="0.0" y="45" width="320" height="270"/>
+                                            <rect key="frame" x="0.0" y="60" width="320" height="255"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -44,7 +44,7 @@
                                         <constraint firstItem="8g6-zC-9Cf" firstAttribute="leading" secondItem="bKD-TP-4HL" secondAttribute="trailing" constant="20" id="34s-Ik-rIk"/>
                                         <constraint firstAttribute="bottom" secondItem="XRp-yC-hFe" secondAttribute="bottom" id="K1Z-Ac-lOL"/>
                                         <constraint firstItem="bKD-TP-4HL" firstAttribute="leading" secondItem="p1R-AV-PFF" secondAttribute="leading" constant="10" id="UAn-xC-Pl4"/>
-                                        <constraint firstItem="XRp-yC-hFe" firstAttribute="top" secondItem="p1R-AV-PFF" secondAttribute="top" constant="45" id="UYn-uf-8ZZ"/>
+                                        <constraint firstItem="XRp-yC-hFe" firstAttribute="top" secondItem="p1R-AV-PFF" secondAttribute="top" constant="60" id="UYn-uf-8ZZ"/>
                                         <constraint firstItem="8g6-zC-9Cf" firstAttribute="top" secondItem="p1R-AV-PFF" secondAttribute="topMargin" id="Ub9-3F-Qej"/>
                                         <constraint firstItem="XRp-yC-hFe" firstAttribute="leading" secondItem="p1R-AV-PFF" secondAttribute="leading" id="Yyw-xh-xu4"/>
                                         <constraint firstItem="bKD-TP-4HL" firstAttribute="top" secondItem="p1R-AV-PFF" secondAttribute="top" constant="10" id="aRc-vc-kUw"/>

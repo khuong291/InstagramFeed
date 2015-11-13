@@ -88,8 +88,8 @@ class InstagramViewController: UIViewController, UITableViewDataSource, UITableV
         let indexPath = instagramTableView.indexPathForCell(sender as! UITableViewCell)
         let instagram = photos[indexPath!.row]
 
+        photoDetailsViewController.comments = instagram.valueForKeyPath("comments.data") as! [NSDictionary]
         photoDetailsViewController.instagram = instagram
-        photoDetailsViewController.comments = photos
     }
 
     func fetchInstagram(){
